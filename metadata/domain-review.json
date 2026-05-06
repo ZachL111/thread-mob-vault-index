@@ -1,0 +1,73 @@
+{
+  "repo": "thread-mob-vault-index",
+  "language": "Go",
+  "category": "Mobile workflows",
+  "goal": "Create a Go reference implementation for vault workflows, centered on format conversion, round-trip fixtures, and lossless normalization checks.",
+  "review_model": {
+    "terms": [
+      "form pressure",
+      "sync drift",
+      "local state",
+      "conflict cost"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "form pressure",
+      "signal": 76,
+      "slack": 25,
+      "drag": 8,
+      "confidence": 48,
+      "score": 201,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "sync drift",
+      "signal": 83,
+      "slack": 46,
+      "drag": 14,
+      "confidence": 58,
+      "score": 228,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "local state",
+      "signal": 71,
+      "slack": 21,
+      "drag": 11,
+      "confidence": 48,
+      "score": 178,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "conflict cost",
+      "signal": 67,
+      "slack": 37,
+      "drag": 20,
+      "confidence": 45,
+      "score": 156,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "form pressure",
+      "signal": 54,
+      "slack": 29,
+      "drag": 27,
+      "confidence": 70,
+      "score": 126,
+      "lane": "watch"
+    }
+  ]
+}
