@@ -61,3 +61,9 @@ foreach ($pathPattern in $knownPaths) {
 go test ./...
 
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-thread-mob-vault-detail.ps1
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-thread-mob-vault-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-thread-mob-vault-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

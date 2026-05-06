@@ -1,0 +1,28 @@
+{
+  "repo": "thread-mob-vault-index",
+  "language": "Go",
+  "category": "Mobile workflows",
+  "goal": "Create a Go reference implementation for vault workflows, centered on format conversion, round-trip fixtures, and lossless normalization checks.",
+  "weights": {
+    "signal": 2,
+    "slack": 2,
+    "confidence": 2,
+    "drag": 4
+  },
+  "thresholds": {
+    "ship": 174,
+    "watch": 120
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}
